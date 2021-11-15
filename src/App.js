@@ -19,14 +19,18 @@ export default function App() {
     ["Diego", "Cruz", "Macalester", "2026"]
   ];
 
-  let list = [];
-  for (let person of people) {
-    let first = person[0];
-    let last = person[1];
-    let school = person[2];
-    let year = person[3];
-    list.push(displayPerson(first, last, school, year));
-  }
+  // let list = [];
+  // for (let person of people) {
+  //   let first = person[0];
+  //   let last = person[1];
+  //   let school = person[2];
+  //   let year = person[3];
+  //   list.push(displayPerson(first, last, school, year));
+  // }
+  let list = people.map(function (person) {
+    return displayPerson(person[0], person[1], person[2], person[3], person[4]);
+  });
+  console.log();
 
   return <div> {list} </div>;
 }
