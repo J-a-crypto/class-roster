@@ -1,5 +1,7 @@
 import "./styles.css";
 
+// import people from "./people.js"
+
 function displayPerson(first, last, school, year, pets) {
   return (
     <div>
@@ -9,20 +11,52 @@ function displayPerson(first, last, school, year, pets) {
   );
 }
 let people = [
-  ["Mikkail", "Allen", "WCHS", "2022"],
-  ["Justin", "Apupalo", "NYIT", "2025"],
-  ["Christopher", "Bonifacio", "OCA", "2022"],
-  ["Angel", "Campoverde", "Cristo Rey High School", "2022"],
-  ["Mahdiya", "Chowdhury", "TYWLS", "2023"],
-  ["Diego", "Cruz", "Macalester", "2026"]
+  { firstName: "Mikkail", lastName: "Allen", school: "WCHS", gradYear: "2022" },
+  {
+    firstName: "Justin",
+    lastName: "Apupalo",
+    school: "NYIT",
+    gradYear: "2025"
+  },
+  {
+    firstName: "Christopher",
+    lastName: "Bonifacio",
+    school: "OCA",
+    gradYear: "2022"
+  },
+  {
+    firstName: "Angel",
+    lastName: "Campoverde",
+    school: "Cristo Rey High School",
+    gradYear: "2022"
+  },
+  {
+    firstName: "Mahdiya",
+    lastName: "Chowdhury",
+    school: "TYWLS",
+    gradYear: "2023"
+  },
+  {
+    firstName: "Diego",
+    lastName: "Cruz",
+    school: "Macalester",
+    gradYear: "2026"
+  }
 ];
+// let people = [
+//   ["Mikkail", "Allen", "WCHS", "2022"],
+//   ["Justin", "Apupalo", "NYIT", "2025"],
+//   ["Christopher", "Bonifacio", "OCA", "2022"],
+//   ["Angel", "Campoverde", "Cristo Rey High School", "2022"],
+//   ["Mahdiya", "Chowdhury", "TYWLS", "2023"],
+//   ["Diego", "Cruz", "Macalester", "2026"]
+// ];
 let list;
 export default function App() {
   list = people.map(function (person) {
-    // TODO
     return (
       <div>
-        {person[0]} {person[1]} {person[2]} {person[3]}
+        {person.firstName} {person.lastName} {person.school} {person.gradYear}
       </div>
     );
   });
